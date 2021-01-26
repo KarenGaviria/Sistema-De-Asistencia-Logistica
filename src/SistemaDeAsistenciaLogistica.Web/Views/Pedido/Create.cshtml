@@ -1,0 +1,47 @@
+﻿@model SistemaDeAsistenciaLogistica.Core.Domain.Pedido
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+}
+
+<h1>Crear</h1>
+
+<h4>Pedido</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdCotizacion" class="control-label"></label>
+                <select asp-for="IdCotizacion" class ="form-control" asp-items="ViewBag.IdCotizacion"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaPedido" class="control-label"></label>
+                <input asp-for="FechaPedido" class="form-control" />
+                <span asp-validation-for="FechaPedido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LugarEntrega" class="control-label"></label>
+                <input asp-for="LugarEntrega" class="form-control" />
+                <span asp-validation-for="LugarEntrega" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdBarrio" class="control-label"></label>
+                <select asp-for="IdBarrio" class ="form-control" asp-items="ViewBag.IdBarrio"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Atrás</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

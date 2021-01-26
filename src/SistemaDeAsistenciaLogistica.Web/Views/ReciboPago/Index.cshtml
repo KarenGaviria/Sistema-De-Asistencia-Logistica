@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SistemaDeAsistenciaLogistica.Core.Domain.ReciboPago>
+
+@{
+    ViewData["Title"] = "Recibo de Pago";
+    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+}
+
+<form class="form-index">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                N° Pedido
+            </th>
+            <th><h6><a asp-action="Create">Registar Recibo de Pago</a></h6></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPedidoNavigation.IdPedido)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdReciboPago"><i class="fas fa-edit"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.IdReciboPago"><i class="fas fa-info"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.IdReciboPago"><i class="fas fa-trash-alt"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</form>

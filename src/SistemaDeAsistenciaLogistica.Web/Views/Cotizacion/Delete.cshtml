@@ -1,0 +1,46 @@
+﻿@model SistemaDeAsistenciaLogistica.Core.Domain.Cotizacion
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+}
+
+<h1>Eliminar</h1>
+
+<h3>¿Está seguro de que quiere eliminar esto?</h3>
+<div>
+    <h4>Cotización</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+        <dt class = "col-sm-2">
+           Valor Total
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ValorTotal)
+        </dd>
+        <dt class = "col-sm-2">
+           Clientes
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdPerfilNavigation.PrimerApellido)
+        </dd class>
+        <dt class = "col-sm-2">
+           Producto
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdProductoNavigation.Nombre)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdCotizacion" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Atrás</a>
+    </form>
+</div>

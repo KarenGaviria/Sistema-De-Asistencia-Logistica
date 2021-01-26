@@ -1,0 +1,66 @@
+﻿@model IEnumerable<SistemaDeAsistenciaLogistica.Core.Domain.Produccion>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+}
+
+<h1>Producciones</h1>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaProduccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DetalleProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEstadoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPerfilNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdProductoNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaProduccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DetalleProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEstadoNavigation.IdEstado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPerfilNavigation.PrimerApellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProductoNavigation.IdProducto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdProduccion"><i class="fas fa-edit"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.IdProduccion"><i class="fas fa-info"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.IdProduccion"><i class="fas fa-trash-alt"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+﻿@model SistemaDeAsistenciaLogistica.Core.Domain.Barrios
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+}
+
+<h1>Eliminar</h1>
+
+<h3>¿Está seguro de que quiere eliminar esto?</h3>
+<div>
+    <h4>Barrios</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreBarrio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreBarrio)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdBarrio" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Atrás</a>
+    </form>
+</div>

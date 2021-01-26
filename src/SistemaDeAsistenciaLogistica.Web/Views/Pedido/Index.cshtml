@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SistemaDeAsistenciaLogistica.Core.Domain.Pedido>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+}
+
+<h1>Pedidos</h1>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LugarEntrega)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdBarrioNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCotizacionNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LugarEntrega)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdBarrioNavigation.IdBarrio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCotizacionNavigation.IdCotizacion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdPedido"><i class="fas fa-edit"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.IdPedido"><i class="fas fa-info"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.IdPedido"><i class="fas fa-trash-alt"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

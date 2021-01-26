@@ -1,0 +1,60 @@
+﻿@model SistemaDeAsistenciaLogistica.Core.Domain.Inventario
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+}
+
+<h1>Editar</h1>
+
+<h4>Inventario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdInventario" />
+            <div class="form-group">
+                <label asp-for="IdInsumo" class="control-label"></label>
+                <select asp-for="IdInsumo" class="form-control" asp-items="ViewBag.IdInsumo"></select>
+                <span asp-validation-for="IdInsumo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaIngreso" class="control-label"></label>
+                <input asp-for="FechaIngreso" class="form-control" />
+                <span asp-validation-for="FechaIngreso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cantidad" class="control-label"></label>
+                <input asp-for="Cantidad" class="form-control" />
+                <span asp-validation-for="Cantidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorUnidadValorMetro" class="control-label"></label>
+                <input asp-for="ValorUnidadValorMetro" class="form-control" />
+                <span asp-validation-for="ValorUnidadValorMetro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorTotal" class="control-label"></label>
+                <input asp-for="ValorTotal" class="form-control" />
+                <span asp-validation-for="ValorTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdPerfil" class="control-label"></label>
+                <select asp-for="IdPerfil" class="form-control" asp-items="ViewBag.IdPerfil"></select>
+                <span asp-validation-for="IdPerfil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Atrás</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

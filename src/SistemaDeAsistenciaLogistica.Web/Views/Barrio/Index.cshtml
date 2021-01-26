@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SistemaDeAsistenciaLogistica.Core.Domain.Barrios>
+
+@{ ViewData["Title"] = "Index";
+                Layout = "~/Views/Shared/_LayoutAdmi.cshtml"; }
+
+
+<h1>Barrios</h1>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreBarrio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.NombreBarrio)
+    </td>
+    <td>
+        <a asp-action="Edit" asp-route-id="@item.IdBarrio"><i class="fas fa-edit"></i></a> |
+        <a asp-action="Details" asp-route-id="@item.IdBarrio"><i class="fas fa-info"></i></a>|
+        <a asp-action="Delete" asp-route-id="@item.IdBarrio"><i class="fas fa-trash-alt"></i></a>
+    </td>
+</tr>}
+    </tbody>
+</table>

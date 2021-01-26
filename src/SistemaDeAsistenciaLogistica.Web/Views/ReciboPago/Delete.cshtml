@@ -1,0 +1,25 @@
+﻿@model SistemaDeAsistenciaLogistica.Core.Domain.ReciboPago
+
+@{
+    ViewData["Title"] = "Recibo de Pago";
+    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+}
+
+<h3>¿Desea eliminar @ViewData["Title"]?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            N° Pedido
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdPedidoNavigation.IdPedido)
+        </dd class>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdReciboPago" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index"><i class="fas fa-trash-alt"></i></a>
+    </form>
+</div>

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SistemaDeAsistenciaLogistica.Core.Domain.Insumos>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+}
+
+<h1>Insumos</h1>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreInsumo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdColorNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdProveedorNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreInsumo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdColorNavigation.IdColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProveedorNavigation.IdProveedor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdInsumo"><i class="fas fa-edit"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.IdInsumo"><i class="fas fa-info"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.IdInsumo"><i class="fas fa-trash-alt"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

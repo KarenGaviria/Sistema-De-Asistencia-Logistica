@@ -1,0 +1,37 @@
+﻿@model IEnumerable<SistemaDeAsistenciaLogistica.Core.Domain.TipoProducto>
+
+@{
+    ViewData["Title"] = "Tipo de Producto";
+    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+}
+
+<form class="form-index">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Tipos de producto
+                </th>
+                
+                <th><h6><a asp-action="Create"><i class="fas fa-plus"></i>Registar Tipo de Producto</a></h6></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NombreProducto)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.IdTipoProducto"><i class="fas fa-edit"></i></a> |
+                        
+                        <a asp-action="Delete" asp-route-id="@item.IdTipoProducto"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>

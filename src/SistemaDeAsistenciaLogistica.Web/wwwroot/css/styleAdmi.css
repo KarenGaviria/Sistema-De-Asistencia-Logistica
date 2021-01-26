@@ -1,0 +1,139 @@
+:root {
+    --primary: rgb(90, 90, 90);
+    --light: rgb(126, 3, 3);
+    --grey: rgb(255, 255, 255);
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.bg-primary { background-color: rgb(0, 44, 73) !important;}
+.bg-light { background-color: rgb(0, 44, 73) !important;}
+.bg-grey { background-color: rgb(212, 212, 212) !important;}
+
+.btn {
+    border: 0;
+}
+
+.btn-primary {
+    background-color: rgb(34, 50, 81);
+}
+
+.btn-primary:hover {
+    background-color: rgb(56, 98, 177);
+}
+
+/* logo navegación*/
+.logo {
+    padding: 8px 16px;
+}
+
+.logo-brand {
+	min-width: 40px;
+	max-width: 60px;
+	width: 40px;
+    border-radius: 50%;
+}
+
+
+#sidebar-container {
+    min-height: 100vh;
+}
+
+#sidebar-container .menu {
+    width: 18rem;
+}
+
+.btn-search {
+    right: -30px;
+}
+
+#content {
+    overflow: auto;
+    height: 89vh;
+}
+
+
+#navbarDropdown {
+    color: antiquewhite;
+    padding: 12px 24px;
+}
+
+.btn i { font-size: 14px; margin: 5px; }
+
+.topmargin-xs {margin-top: 15px !important;}
+.topmargin-sm {margin-top: 30px !important;}
+.topmargin-lg {margin-top: 60px !important;}
+
+h1 { text-align: center;}
+h6 { text-align: center;}
+b, strong {text-align: center;}
+
+a {color: #ffffff;
+}
+/*Estilos Index*/
+.form-index {
+    max-width: 500px;
+    margin: auto;
+    padding-top: 9%;  
+}
+
+
+/*Estilos Edit*/
+.form-edit {
+    max-width: 500px;
+    margin: auto;
+    padding-top: 9%;
+}
+
+.ion-ios-undo:before {
+    font-size: 33px;
+    color: #3b397f;
+    padding: 0px 30px;
+}
+
+.form-group-edit-a {
+    background: rgba(35, 97, 126, 0.39);
+}
+
+.form-group-edit {
+    padding: 0px 100px;
+}
+
+.table thead th {
+    background: rgba(35, 97, 126, 0.39);
+}
+
+
+
+.table td {
+    background: rgba(5, 21, 29, 0.514);
+}
+
+
+.bg-light-grey {
+    background-color: rgba(116, 114, 114, 0.219);
+    padding: 6px 18px;
+}
+
+@media (max-width: 768px) {
+    #sidebar-container {
+        display: none;
+    }
+    .stat {
+        border: 0;
+    }
+}
