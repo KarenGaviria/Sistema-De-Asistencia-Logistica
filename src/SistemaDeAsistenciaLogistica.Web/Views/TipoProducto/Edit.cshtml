@@ -1,12 +1,15 @@
 ﻿@model SistemaDeAsistenciaLogistica.Core.Domain.TipoProducto
 
-@{
-    ViewData["Title"] = "Editar";
-    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+@{ ViewData["Title"] = "Editar";
+                Layout = "~/Views/Shared/_LayoutAdmi.cshtml"; }
+
+@section ScriptValidacion{
+    <script src="~/lib/bootstrap-validator/bootstrapValidator.js"></script>
+    <script src="~/js/validacionFormNombreProducto.js"></script>
 }
 
 
-<form asp-action="Edit" class="form-edit">
+<form asp-action="Edit"  id="createNombreProductoForm">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="IdTipoProducto" />
     <div class="form-group-edit-a">

@@ -14,23 +14,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.FechaIngreso)
+                Fecha Ingreso
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Cantidad)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ValorUnidadValorMetro)
+                Valor Unidad/
+                  Valor Metro
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ValorTotal)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdInsumoNavigation)
+               Insumo
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdPerfilNavigation)
-            </th>
+           
             <th></th>
         </tr>
     </thead>
@@ -50,7 +49,7 @@
                 @Html.DisplayFor(modelItem => item.ValorTotal)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdInsumoNavigation.IdInsumo)
+                @Html.DisplayFor(modelItem => item.IdInsumoNavigation.NombreInsumo)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IdPerfilNavigation.PrimerApellido)

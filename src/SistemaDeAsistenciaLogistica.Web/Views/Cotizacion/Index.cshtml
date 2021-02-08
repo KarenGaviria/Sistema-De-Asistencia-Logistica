@@ -17,13 +17,13 @@
                 @Html.DisplayNameFor(model => model.Cantidad)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ValorTotal)
+                Valor total
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdPerfilNavigation)
+               Cliente
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdProductoNavigation)
+               Producto
             </th>
             <th></th>
         </tr>
@@ -41,7 +41,7 @@
                 @Html.DisplayFor(modelItem => item.IdPerfilNavigation.PrimerApellido)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdProductoNavigation.IdProducto)
+                @Html.DisplayFor(modelItem => item.IdProductoNavigation.Nombre)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdCotizacion"><i class="fas fa-edit"></i></a> |

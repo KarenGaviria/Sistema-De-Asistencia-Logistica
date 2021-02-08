@@ -1,8 +1,11 @@
 ﻿@model SistemaDeAsistenciaLogistica.Core.Domain.Cotizacion
 
-@{
-    ViewData["Title"] = "Edit";
-    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+@{ ViewData["Title"] = "Edit";
+                Layout = "~/Views/Shared/_LayoutAdmi.cshtml"; }
+
+@section ScriptValidacion{
+    <script src="~/lib/bootstrap-validator/bootstrapValidator.js"></script>
+    <script src="~/js/validacionFormCotizacion.js"></script>
 }
 
 <h1>Editar</h1>
@@ -11,7 +14,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" id="createCotizacionForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdCotizacion" />
             <div class="form-group">

@@ -1,14 +1,17 @@
 ﻿@model SistemaDeAsistenciaLogistica.Core.Domain.TipoProducto
 
-@{
-    ViewData["Title"] = "Ingresar";
-    Layout = "~/Views/Shared/_LayoutAdmi.cshtml";
+@{ ViewData["Title"] = "Ingresar";
+                Layout = "~/Views/Shared/_LayoutAdmi.cshtml"; }
+
+@section ScriptValidacion{
+    <script src="~/lib/bootstrap-validator/bootstrapValidator.js"></script>
+    <script src="~/js/validacionFormNombreProducto.js"></script>
 }
 
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create" class="form-edit">
+        <form asp-action="Create" id="createNombreProductoForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="NombreProducto" class="control-label">Tipo de Producto</label>
@@ -24,6 +27,4 @@
 </div>
 
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+

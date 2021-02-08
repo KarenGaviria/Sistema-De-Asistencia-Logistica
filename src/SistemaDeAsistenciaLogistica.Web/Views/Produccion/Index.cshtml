@@ -14,46 +14,43 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.FechaProduccion)
+               Fecha Producción
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DetalleProducto)
-            </th>
+         
+                <!--  <th>
+       Detalle Producto
+    </th>-->
             <th>
                 @Html.DisplayNameFor(model => model.Cantidad)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdEstadoNavigation)
+               Estado
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdPerfilNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdProductoNavigation)
+               Producto
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.FechaProduccion)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DetalleProducto)
-            </td>
-            <td>
+            <!--  <td>
+               @Html.DisplayFor(modelItem => item.DetalleProducto)
+            </td> -->
+             <td>
                 @Html.DisplayFor(modelItem => item.Cantidad)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdEstadoNavigation.IdEstado)
+                @Html.DisplayFor(modelItem => item.IdEstadoNavigation.EstadoProduccion1)
             </td>
+
             <td>
-                @Html.DisplayFor(modelItem => item.IdPerfilNavigation.PrimerApellido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdProductoNavigation.IdProducto)
+                @Html.DisplayFor(modelItem => item.IdProductoNavigation.Nombre)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdProduccion"><i class="fas fa-edit"></i></a> |
@@ -61,6 +58,6 @@
                 <a asp-action="Delete" asp-route-id="@item.IdProduccion"><i class="fas fa-trash-alt"></i></a>
             </td>
         </tr>
-}
-    </tbody>
-</table>
+    }
+        </tbody>
+    </table>

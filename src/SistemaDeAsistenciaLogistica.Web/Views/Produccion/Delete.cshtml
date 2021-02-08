@@ -13,13 +13,13 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaProduccion)
+           Fecha Produccion
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.FechaProduccion)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DetalleProducto)
+            Detalle Producto
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.DetalleProducto)
@@ -31,22 +31,18 @@
             @Html.DisplayFor(model => model.Cantidad)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdEstadoNavigation)
+           Estado
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdEstadoNavigation.IdEstado)
+            @Html.DisplayFor(model => model.IdEstadoNavigation.EstadoProduccion1)
         </dd class>
+       
+       
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdPerfilNavigation)
+           Producto
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdPerfilNavigation.PrimerApellido)
-        </dd class>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdProductoNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdProductoNavigation.IdProducto)
+            @Html.DisplayFor(model => model.IdProductoNavigation.Nombre)
         </dd class>
     </dl>
     

@@ -14,16 +14,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.FechaPedido)
+                Fecha Pedido
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LugarEntrega)
+               Lugar Entrega
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdBarrioNavigation)
+               Barrio
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdCotizacionNavigation)
+               No.Cotización
             </th>
             <th></th>
         </tr>
@@ -38,7 +38,7 @@
                 @Html.DisplayFor(modelItem => item.LugarEntrega)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdBarrioNavigation.IdBarrio)
+                @Html.DisplayFor(modelItem => item.IdBarrioNavigation.NombreBarrio)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IdCotizacionNavigation.IdCotizacion)

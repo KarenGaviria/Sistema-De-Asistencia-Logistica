@@ -17,10 +17,10 @@
                 @Html.DisplayNameFor(model => model.NombreInsumo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdColorNavigation)
+                Color
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdProveedorNavigation)
+               Distribuidora
             </th>
             <th></th>
         </tr>
@@ -32,10 +32,10 @@
                 @Html.DisplayFor(modelItem => item.NombreInsumo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdColorNavigation.IdColor)
+                @Html.DisplayFor(modelItem => item.IdColorNavigation.Color)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdProveedorNavigation.IdProveedor)
+                @Html.DisplayFor(modelItem => item.IdProveedorNavigation.Distribuidora)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdInsumo"><i class="fas fa-edit"></i></a> |
