@@ -1,7 +1,7 @@
 ﻿@model SistemaDeAsistenciaLogistica.Core.Domain.Produccion
 
 @{ ViewData["Title"] = "Create";
-                Layout = "~/Views/Shared/_LayoutAdmi.cshtml"; }
+    Layout = "~/Views/Shared/_LayoutAdmi.cshtml"; }
 
 @section ScriptValidacion{
     <script src="~/lib/bootstrap-validator/bootstrapValidator.js"></script>
@@ -51,6 +51,4 @@
     <a asp-action="Index">Atrás</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+
